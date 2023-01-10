@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.19)
+project(Performance_Cockpit)
+
+set(CMAKE_CXX_STANDARD 20)
+SET(GCC_COVERAGE_LINK_FLAGS "-Wall -std=c++20 -lstdc++fs")
+set(GCC_COVERAGE_COMPILE_FLAGS "-L/usr/X11R6/lib -lm -lpthread -lX11 ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}${GCC_COVERAGE_COMPILE_FLAGS}")
+add_definitions(${GCC_COVERAGE_COMPILE.FLAGS})
+add_executable(Performance_Cockpit main.cpp)
+target_link_libraries(Performance_Cockpit stdc++fs sqlite3)
